@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4355EE9F-E802-41FE-885E-9960C29DE65E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comportamiento\Command\Comando Abstracto\Comando.cs" />
+    <Compile Include="Comportamiento\Command\Comando Concreto\ComandoCopiar.cs" />
+    <Compile Include="Comportamiento\Command\Comando Concreto\ComandoCortar.cs" />
+    <Compile Include="Comportamiento\Command\Comando Concreto\ComandoPegar.cs" />
+    <Compile Include="Comportamiento\Command\CommandFormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\Command\CommandFormCliente.Designer.cs">
+      <DependentUpon>CommandFormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\Command\Receptor\ContenedorTexto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\Command\Receptor\ContenedorTexto.Designer.cs">
+      <DependentUpon>ContenedorTexto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\Command\Invocador\Menu.cs" />
+    <Compile Include="Comportamiento\State\Contexto\CuentaCorriente.cs" />
+    <Compile Include="Comportamiento\State\Estado Abstracto\EstadoCuenta.cs" />
+    <Compile Include="Comportamiento\State\Estados Concretos\Saturado.cs" />
+    <Compile Include="Comportamiento\State\Estados Concretos\Normal.cs" />
+    <Compile Include="Comportamiento\State\Estados Concretos\Rojo.cs" />
+    <Compile Include="Comportamiento\State\StateClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\State\StateClientForm.Designer.cs">
+      <DependentUpon>StateClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\Strategy\Contexto\Pelea.cs" />
+    <Compile Include="Comportamiento\Strategy\Estrategia Abstracta\EstrategiaContraataque.cs" />
+    <Compile Include="Comportamiento\Strategy\Estrategias Concretas\EstrategiaContraataqueBelico.cs" />
+    <Compile Include="Comportamiento\Strategy\Estrategias Concretas\EstrategiaContraataqueFisico.cs" />
+    <Compile Include="Comportamiento\Strategy\Estrategias Concretas\EstrategiaContraataqueMagico.cs" />
+    <Compile Include="Comportamiento\Strategy\StrategyFormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\Strategy\StrategyFormClient.Designer.cs">
+      <DependentUpon>StrategyFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\TemplateMethod\Clases Concretas\Email.cs" />
+    <Compile Include="Comportamiento\TemplateMethod\Clase Abstracta\Mensaje.cs" />
+    <Compile Include="Comportamiento\TemplateMethod\Clases Concretas\SeñalDeHumo.cs" />
+    <Compile Include="Comportamiento\TemplateMethod\Clases Concretas\Sms.cs" />
+    <Compile Include="Comportamiento\TemplateMethod\TemplateMethodFormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\TemplateMethod\TemplateMethodFormClient.Designer.cs">
+      <DependentUpon>TemplateMethodFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creacionales\AbstractFactory\AbstractFactoryFormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creacionales\AbstractFactory\AbstractFactoryFormCliente.Designer.cs">
+      <DependentUpon>AbstractFactoryFormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creacionales\AbstractFactory\Producto Concreto\Guitarra.cs" />
+    <Compile Include="Creacionales\AbstractFactory\Fabrica Concreta\GuitarraFactory.cs" />
+    <Compile Include="Creacionales\AbstractFactory\Producto Abstracto\Instrumento.cs" />
+    <Compile Include="Creacionales\AbstractFactory\Fabrica Abstracta\InstrumentoFactory.cs" />
+    <Compile Include="Creacionales\AbstractFactory\Producto Concreto\Piano.cs" />
+    <Compile Include="Creacionales\AbstractFactory\Fabrica Concreta\PianoFactory.cs" />
+    <Compile Include="Creacionales\Builder\Builder Concreto\AtrixBuilder.cs" />
+    <Compile Include="Creacionales\Builder\BuilderFormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creacionales\Builder\BuilderFormCliente.Designer.cs">
+      <DependentUpon>BuilderFormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creacionales\Builder\Producto\Cargador.cs" />
+    <Compile Include="Creacionales\Builder\Producto\Celular.cs" />
+    <Compile Include="Creacionales\Builder\Builder Abstracto\CelularBuilder.cs" />
+    <Compile Include="Creacionales\Builder\Director\CompaniaCelular.cs" />
+    <Compile Include="Creacionales\Builder\Builder Concreto\SamsungGalaxyBuilder.cs" />
+    <Compile Include="Creacionales\Builder\Builder Concreto\NokiaN9Builder.cs" />
+    <Compile Include="Creacionales\Builder\Producto\Pantalla.cs" />
+    <Compile Include="Creacionales\Builder\Producto\Teclado.cs" />
+    <Compile Include="Creacionales\FactoryMethod\Fabrica Abstracta\InstrumentoFactory.cs" />
+    <Compile Include="Creacionales\FactoryMethod\Fabrica Concreta\GuitarraFactory.cs" />
+    <Compile Include="Creacionales\FactoryMethod\Fabrica Concreta\PianoFactory.cs" />
+    <Compile Include="Creacionales\FactoryMethod\FactoryMethodFormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creacionales\FactoryMethod\FactoryMethodFormCliente.Designer.cs">
+      <DependentUpon>FactoryMethodFormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creacionales\FactoryMethod\Producto Concreto\Guitarra.cs" />
+    <Compile Include="Creacionales\FactoryMethod\Producto Concreto\Piano.cs" />
+    <Compile Include="Creacionales\FactoryMethod\Producto Abstracto\Instrumento.cs" />
+    <Compile Include="Creacionales\Prototype\Gestor de prototipos\GestorPrototiposVehiculo.cs" />
+    <Compile Include="Creacionales\Prototype\Prototipo\PrototipoVehiculo.cs" />
+    <Compile Include="Creacionales\Prototype\PrototypeFormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creacionales\Prototype\PrototypeFormCliente.Designer.cs">
+      <DependentUpon>PrototypeFormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creacionales\Prototype\Producto\Vehiculo.cs" />
+    <Compile Include="Patrones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patrones.Designer.cs">
+      <DependentUpon>Patrones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Estructurales\Adapter\Adaptee\Gps.cs" />
+    <Compile Include="Estructurales\Adapter\AdapterClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructurales\Adapter\AdapterClientForm.Designer.cs">
+      <DependentUpon>AdapterClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructurales\Adapter\Adapter\DispositivoConGps.cs" />
+    <Compile Include="Estructurales\Adapter\Target\Dispositivo.cs" />
+    <Compile Include="Estructurales\Bridge\Abstraccion Redefinida\ReproductorVideo.cs" />
+    <Compile Include="Estructurales\Bridge\Abstraccion\ReproductorMultimedia.cs" />
+    <Compile Include="Estructurales\Bridge\BridgeFormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructurales\Bridge\BridgeFormClient.Designer.cs">
+      <DependentUpon>BridgeFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructurales\Bridge\Implementador Redefinido\ReproductorVideoImplementador.cs" />
+    <Compile Include="Estructurales\Bridge\Implementador Redefinido\ReproductorVideoImplementadorMejorado.cs" />
+    <Compile Include="Estructurales\Bridge\Implementador\ReproductorMultimediaImplementador.cs" />
+    <Compile Include="Estructurales\Decorator\Componente\Personaje.cs" />
+    <Compile Include="Estructurales\Decorator\Decorador\PersonajeNormal.cs" />
+    <Compile Include="Estructurales\Decorator\Decorador\PersonajeVolador.cs" />
+    <Compile Include="Estructurales\Decorator\DecoratorFormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructurales\Decorator\DecoratorFormClient.Designer.cs">
+      <DependentUpon>DecoratorFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructurales\Observer\Observador Abstracto\IEtiquetaObserver.cs" />
+    <Compile Include="Estructurales\Observer\Observador Concreto\Etiqueta.cs" />
+    <Compile Include="Estructurales\Observer\ObserverFormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructurales\Observer\ObserverFormClient.Designer.cs">
+      <DependentUpon>ObserverFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructurales\Observer\Sujeto Abstracto\Calculadora.cs" />
+    <Compile Include="Estructurales\Observer\Sujeto Concreto\Sumador.cs" />
+    <Compile Include="Estructurales\Proxy\ProxyFormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructurales\Proxy\ProxyFormClient.Designer.cs">
+      <DependentUpon>ProxyFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructurales\Proxy\Proxy\ProxyForo.cs" />
+    <Compile Include="Estructurales\Proxy\RealSubject\Comentario.cs" />
+    <Compile Include="Estructurales\Proxy\RealSubject\Foro.cs" />
+    <Compile Include="Estructurales\Proxy\Subject\IForo.cs" />
+    <EmbeddedResource Include="Comportamiento\Command\CommandFormCliente.resx">
+      <DependentUpon>CommandFormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comportamiento\Command\Receptor\ContenedorTexto.resx">
+      <DependentUpon>ContenedorTexto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comportamiento\State\StateClientForm.resx">
+      <DependentUpon>StateClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comportamiento\Strategy\StrategyFormClient.resx">
+      <DependentUpon>StrategyFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comportamiento\TemplateMethod\TemplateMethodFormClient.resx">
+      <DependentUpon>TemplateMethodFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creacionales\AbstractFactory\AbstractFactoryFormCliente.resx">
+      <DependentUpon>AbstractFactoryFormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creacionales\Builder\BuilderFormCliente.resx">
+      <DependentUpon>BuilderFormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creacionales\FactoryMethod\FactoryMethodFormCliente.resx">
+      <DependentUpon>FactoryMethodFormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creacionales\Prototype\PrototypeFormCliente.resx">
+      <DependentUpon>PrototypeFormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patrones.resx">
+      <DependentUpon>Patrones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Estructurales\Adapter\AdapterClientForm.resx">
+      <DependentUpon>AdapterClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructurales\Bridge\BridgeFormClient.resx">
+      <DependentUpon>BridgeFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructurales\Decorator\DecoratorFormClient.resx">
+      <DependentUpon>DecoratorFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructurales\Observer\ObserverFormClient.resx">
+      <DependentUpon>ObserverFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructurales\Proxy\ProxyFormClient.resx">
+      <DependentUpon>ProxyFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
